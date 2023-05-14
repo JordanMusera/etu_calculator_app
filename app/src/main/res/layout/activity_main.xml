@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B5FFFFFF"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#388E3C"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="etu Easy Calculator"
+            android:fontFamily="@string/fab_transformation_sheet_behavior"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center">
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text=""
+        android:autoSizeTextType="uniform"
+        android:textColor="#022F7E"
+        android:textAlignment="textEnd"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/display1"
+        android:layout_above="@id/display2"></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="0"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="textEnd"
+        android:background="#E8B8B6B6"
+        android:textSize="50dp"
+        android:id="@+id/display2"
+        android:layout_above="@id/calcButtons"
+        android:layout_marginBottom="10dp"></TextView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/calcButtons">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="("
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButtonOpenBracket"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text=")"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButtonCloseBracket"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="/"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:backgroundTint="#F57C00"
+            android:id="@+id/calcButtonDivide"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            app:backgroundTint="#E64A19"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="c"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButtonC"
+
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="7"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButton7"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="8"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButton8"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="9"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButton9"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="*"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:backgroundTint="#1E7100"
+            android:id="@+id/calcButtonMultiply"
+
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="4"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButton4"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="5"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButton5"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="6"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButton6"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            android:backgroundTint="#001E78"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="+"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButtonAdd"
+
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="1"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButton1"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="2"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButton2"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="3"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButton3"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="-"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:backgroundTint="#7B1FA2"
+            android:id="@+id/calcButtonMinus"
+
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:backgroundTint="#D32F2F"
+            android:text="AC"
+            android:textColor="#EF0909"
+            android:textSize="27dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButtonAC"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="0"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButtonZero"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="."
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:id="@+id/calcButtonPoint"
+
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            app:cornerRadius="36dp"
+            android:padding="0dp"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:text="="
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:backgroundTint="#016E61"
+            android:id="@+id/calcButtonEqual"
+
+
+            />
+    </LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>
+
